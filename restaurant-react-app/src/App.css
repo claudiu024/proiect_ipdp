@@ -1,6 +1,6 @@
 body{
-  /*background-image: url("restaurant_poza.jpg");*/
-  /* background-size: 100%; */
+  background-image: url("restaurant_poza.jpg");
+  
 
   background-position: center center;
   background-attachment: fixed;
@@ -77,8 +77,6 @@ background-color:#C93144;}
   height: 3.5rem;
 
 }
-
-
 .link-div{
   margin:1rem;
 }
@@ -114,5 +112,4 @@ background-color:#C93144;}
   }
   
 }
-
 

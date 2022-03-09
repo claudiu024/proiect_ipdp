@@ -9,8 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
         <div className="App">
-            {/* <Navigation /> */}
-            {/* <Routes /> */}
+        
         </div>
     </Router>,
     <App />
