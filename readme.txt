@@ -1,11 +1,9 @@
-Nume_Proiect
+Restaurant-online
 ===
  
 Echipa:
 ---
-1. Nume Student 1
-2. Nume Student 2 etc.
+1. Andronache Claudiu
+2. Haldan Andreea
  
-Descriere proiect:
----
-text
+Descriere proiect:Site react 

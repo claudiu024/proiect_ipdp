@@ -48,14 +48,9 @@ h1{
   width: 28.5rem;
   height: 3rem;
 
+
 }
-/* .line{
-  align-items: center;
-  border-bottom: 1px solid black;
-  display: flex;
-  margin: 20px 16px;
-  text-align: center;
-} */
+
 .connect-input{
   background-color: #8A0718;
   width: 31.5rem;
@@ -66,8 +61,6 @@ h1{
   cursor: pointer;
   border:none;
   color: white;
-
-
 }
 
 .connect-input:hover{

@@ -10,6 +10,7 @@ import {
 
 function App() {
   return (
+
   <Router>
         <Switch>
           <Route path="/register">
@@ -21,6 +22,7 @@ function App() {
             </Route>
         </Switch>
   </Router>
+
   );
         }
 
