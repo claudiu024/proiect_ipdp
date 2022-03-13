@@ -1,7 +1,5 @@
 body{
   background-image: url("restaurant_poza.jpg");
-  
-
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -48,9 +46,14 @@ h1{
   width: 28.5rem;
   height: 3rem;
 
-
 }
-
+/* .line{
+  align-items: center;
+  border-bottom: 1px solid black;
+  display: flex;
+  margin: 20px 16px;
+  text-align: center;
+} */
 .connect-input{
   background-color: #8A0718;
   width: 31.5rem;
@@ -61,6 +64,8 @@ h1{
   cursor: pointer;
   border:none;
   color: white;
+
+
 }
 
 .connect-input:hover{
@@ -92,14 +97,14 @@ background-color:#C93144;}
 }@media only screen and  (max-device-width: 580px) {
   :root{ font-size:1rem;}
   .login-div{ 
-    width: 80%; 
-   height: 50%;
+    width: 20rem; 
+   height: 20rem;
    font-size:0.6rem;
   }
   .text-input{padding:0.5rem;margin:0.5rem;height:40%;width:70%;font-size:1rem;}
   .App-link{font-size: 1rem;}
   .user-div,h1,body,.link-div{margin: 1rem;}
-  .connect-input{padding: 0.6rem;height:70%;width: 70%;font-size:0.7rem;margin: 0.1rem;}
+  .connect-input{padding: 0.6rem;height:10% ;width: 70%;font-size:0.7rem;margin: 0.1rem;}
   .register-button{height:10%;width: 70%;padding: 0.6rem;
 
   }
