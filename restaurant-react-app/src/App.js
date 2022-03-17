@@ -1,6 +1,8 @@
 import './App.css';
 import Register from "./register"
 import Home from "./home"
+import Login from './login';
+import Menu from './components/menu';
 import PasswordReset from './passwordreset'
 import {
   BrowserRouter as Router,
@@ -8,6 +10,7 @@ import {
   Route,
   
 } from "react-router-dom";
+
 
 function App() {
   return (
@@ -20,6 +23,10 @@ function App() {
           
           <Route exact path="/">
             <Home />
+          </Route>
+
+          <Route exact path="/login">
+            <Login />
           </Route>
 
           <Route path="/passwordreset">
