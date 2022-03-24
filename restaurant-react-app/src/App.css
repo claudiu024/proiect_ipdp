@@ -16,18 +16,18 @@ position: absolute;
 margin-left:18rem;
 } */
 body{
-  background-image: url("restaurant_poza.jpg");
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("restaurant_poza.jpg"); 
+  background-position: center center; 
+  background-attachment: fixed; 
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .login-div {
   text-align: center;
   position: absolute;
   border-radius: 5%;
-  background-color: #E6C7C1;
+  background-color: bisque;
   opacity: 0.9;
   top:0;
   bottom:0;
@@ -37,76 +37,86 @@ body{
   width: 40rem; 
   height: 40rem; 
 }
+
 .vertical-align{
   position:absolute;
-  margin-left: 2rem;
-  top:7rem;  
+  margin-left: 4rem;
+  top:16.5rem;  
   background-color: #420109;
-  justify-content: center;
-  
+  justify-content: center; 
 }
+
 h1.login{
   color: #8A0718;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
 }
+
+.title-restaurant{
+  color:bisque;
+  text-align: center; 
+  font-style:italic;
+  font-size: 3.5rem;
+  font-family: 'stylish_calligraphy_demoRg';
+  margin-top: 5rem;
+}
+
 h1.nav-bar{
   color:bisque;
   text-align: center; 
   font-style:italic;
-  font-family: 'stylish_calligraphy_demoRg';
+  font-family:'Times New Roman', Times, serif;
   cursor: pointer;
-  
+  text-decoration: none;
+  font-size: 2rem;
 }
+
 h1.nav-bar:hover{
   color: #C93144;
 }
+
 .container-contact{
   position: absolute;
   bottom: 0rem;
-
 }
+
 h3.text-contact{
   color:bisque;
   text-align: center; 
   font-family:monospace;
-  font-style:italic;
-   
+  font-style:italic;  
 }
+
 .user-div{
   margin-top:2rem;
-  font-weight: bold;
-  
+  font-weight: bold; 
 }
+
 .text-input{
- 
   width: 31.5rem;
   height: 4rem;
   font-size: 1.5rem;
   border-radius: 0.5rem;
   margin: 0.7rem;
- 
 }
+
 input.small-text{
   width: 13.3rem;
   height: 3rem;
-  
 }
-.text-input:focus{
 
- border: 0.4rem solid orange;
+.text-input:focus{
+  border: 0.4rem solid orange;
 }
+
 input.larger-text{
   width: 28.5rem;
   height: 3rem;
-
 }
+
 .line{
-/* width:20rem; */
 margin:0 4.5rem 1rem 4.5rem;
-
-
 }
+
 .connect-input{
   background-color: #8A0718;
   width: 31.5rem;
@@ -117,40 +127,92 @@ margin:0 4.5rem 1rem 4.5rem;
   cursor: pointer;
   border:none;
   color: white;
-
-
 }
 
 .connect-input:hover{
-background-color:#C93144;}
+background-color:#C93144;
+}
 
 .connect-input-register{
   width: 29rem;
   height: 3.5rem;
-
 }
+
 .link-div{
   margin:1rem;
 }
+
 .App-link {
   color:black;
   font-size: 1.5rem;
   text-decoration: none;
-
 }
+
+.menu-link {
+  text-decoration: none;
+}
+
 .App-link:hover{
   text-decoration: underline;
 }
 
 .menu{
-  width:15%;
+  width:18rem;
   top:0;
   left:0;
   height: 100%;
-  position: absolute;
+  position: fixed;
   opacity: 0.8;
   background-color: #420109;
+}
 
+.food_menu_container{
+  /* text-align: center; */
+  /* position: absolute; */
+  /* border-radius: 5%; */color:black;
+  background-color: none;
+  /* opacity:0.8; */
+  margin-left:18rem;
+  /* margin-right:1rem; */
+  /* margin-top:1rem;  */
+  /* width: auto;  */
+  height: 40rem;  
+}
+
+.food_menu_row{
+  margin-left: 7rem;
+}
+
+.content_menu{
+  display:inline-block;
+  margin-top: 5rem;
+  margin-right: 2.5rem;
+  margin-bottom: 3rem;
+  background-color: bisque;
+  text-align: center;
+  padding:1rem;
+}
+
+.food_menu_imagine{
+  margin:auto;
+	width: 18rem;
+	height: 18rem;
+	opacity: 1;
+}
+
+.home-logo{
+  width:3.5rem;
+  height:3.5rem;
+  color:bisque;
+  margin-top: 1rem;
+  margin-left:1rem;
+  margin-right:1rem;
+}
+
+.add_to_cart{
+  /* margin-top:0rem; */
+  width:3.5rem;
+  height:3.5rem;
 }
 
 @media only screen and (orientation: landscape) and (max-device-height: 580px) {
@@ -158,9 +220,9 @@ background-color:#C93144;}
    margin-top: 50px;
    /* width: 50%; 
    height: 40%; */
- }
-  
-}@media only screen and  (max-device-width: 580px) {
+  }  
+}
+@media only screen and  (max-device-width: 580px) {
   :root{ font-size:1rem;}
   .login-div{ 
     width: 20rem; 
@@ -171,9 +233,7 @@ background-color:#C93144;}
   .App-link{font-size: 1rem;}
   .user-div,h1,body,.link-div{margin: 1rem;}
   .connect-input{padding: 0.6rem;height:10% ;width: 70%;font-size:0.7rem;margin: 0.1rem;}
-  .register-button{height:10%;width: 70%;padding: 0.6rem;
-
-  }
+  .register-button{height:10%;width: 70%;padding: 0.6rem;}
   
 }
 

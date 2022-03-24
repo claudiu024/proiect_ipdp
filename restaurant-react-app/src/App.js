@@ -2,8 +2,12 @@ import './App.css';
 import Register from "./register"
 import Home from "./home"
 import Login from './login';
-import Menu from './components/menu';
 import PasswordReset from './passwordreset'
+import Breakfast from './breakfast';
+import Soup from './soup';
+import MainDish from './maindish';
+import Drink from './drink';
+import Desert from './desert';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,8 +19,27 @@ import {
 function App() {
   return (
   <Router>
-        <Switch>
+      <Switch>
+        <Route path="/breakfast">
+            <Breakfast />
+          </Route>
 
+          <Route path="/soup">
+            <Soup />
+          </Route>
+
+          <Route path="/maindish">
+            <MainDish />
+          </Route>
+
+          <Route path="/desert">
+            <Desert />
+          </Route>
+
+          <Route path="/drink">
+            <Drink />
+          </Route>
+          
           <Route path="/register">
             <Register />
           </Route>

@@ -3,8 +3,6 @@ import '../App.css';
 function PasswordResetCode()
 {
   
-    
-   // console.log("pressed")
     return(
         
     <div className="user-div">

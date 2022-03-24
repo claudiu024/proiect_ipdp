@@ -4,8 +4,6 @@ import { Menu } from "./components/menu"
 
 import {PasswordResetCode} from './components/Password_reset_code.js'
 
-
-
 function PasswordReset()
 { 
     const [component_list,setComponent]=useState([]);
