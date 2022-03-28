@@ -8,6 +8,8 @@ import Soup from './soup';
 import MainDish from './maindish';
 import Drink from './drink';
 import Desert from './desert';
+import Scroll_to_Top from './components/Scroll_to_Top';
+import { Menu } from './components/menu';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,9 +18,12 @@ import {
 } from "react-router-dom";
 
 
+
 function App() {
   return (
   <Router>
+    <Scroll_to_Top/>
+    <Menu/>
       <Switch>
         <Route path="/breakfast">
             <Breakfast />
@@ -48,7 +53,7 @@ function App() {
             <Home />
           </Route>
 
-          <Route exact path="/login">
+          <Route path="/login">
             <Login />
           </Route>
 

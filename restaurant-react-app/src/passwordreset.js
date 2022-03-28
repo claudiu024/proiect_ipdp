@@ -1,15 +1,31 @@
 import React ,{Component, useState}from 'react';
 import './App.css';
+import {useTransition,animated} from "react-spring"
 import { Menu } from "./components/menu"
 
 import {PasswordResetCode} from './components/Password_reset_code.js'
 
 function PasswordReset()
-{ 
-    const [component_list,setComponent]=useState([]);
-function add_component(){if (component_list.length==0) setComponent(component_list.concat(<PasswordResetCode key={component_list.length}/>))
+{   
+    // const [component_list,setComponent]=useState([]);
+    const [IsVisible,setIsVisible]=useState();
+    const transition=useTransition(IsVisible,{
+      config:{duration: 500},
+    //   initial:{opacity:1},
+      from:{ opacity:0 },
+      enter:{opacity:1},
+      leave:{opacity:0}
+    })
+// function add_component(){if (component_list.length==0) setComponent(component_list.concat(<PasswordResetCode key={component_list.length}/>))
 
+// }
+function add_component()
+
+{
+
+setIsVisible(v=>!v);
 }
+
 
     return(
      <div>
@@ -22,7 +38,14 @@ function add_component(){if (component_list.length==0) setComponent(component_li
 
         </div>
         <button className="connect-input connect-input-register" onClick={add_component}>Send Code to E-mail</button>
-        {component_list}
+        {/* {component_list} */}
+      
+        <div>{transition((style,item)=>
+         item ?<animated.div style={style} >
+     <PasswordResetCode/>
+          
+         </animated.div>:" ")}
+         </div>
     </div>
     </div> 
     )

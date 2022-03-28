@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './App.css';
 import { Menu} from "./components/menu" ;
 import Axios from "axios";
+import Login_container from './components/login_container';
+import { Link } from 'react-router-dom';
+// import {PasswordReset} from './  /passwordreset.js'
 
 function Register(){
     const [first_name, setfirst_name]=useState("");
@@ -26,11 +29,9 @@ Axios.post('http://localhost:4060/create',{
     return(
     
         <div>
-            
         <Menu/>
-        <div className="login-div">
-              <h1 className='login'>Register</h1>
-     
+        <Login_container title="Register">
+        
               {/* <form action="login"> */}
               <div className="user-div">
               <input className="text-input small-text" type="text" placeholder="First Name" 
@@ -53,10 +54,12 @@ Axios.post('http://localhost:4060/create',{
               
               <input className="text-input small-text" type="password" placeholder="Confirm Password"/>
               </div>
-              <button onClick={submit} className="connect-input connect-input-register" type="submit" value="Create account" >Create account</button>
+             <Link  to= "/passwordreset"><button onClick={submit} className="connect-input connect-input-register" type="submit" value="Create account" >Create account</button>
+             </Link> 
               {/* </form> */}
-              </div>
-              {/* </login_box> */}
+              {/* </div> */}
+              </Login_container>
+            
           </div>
     
       

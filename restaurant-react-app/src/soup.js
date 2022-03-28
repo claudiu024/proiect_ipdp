@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import './App.css';
 import { Menu} from "./components/menu" ;
 import ChickenNoodlesSoup from "./poze mancare/chicken-noodles-soup.jpg";
 import PeaAndMintSoup from "./poze mancare/pea-and-mint-soup.jpg";
@@ -13,122 +11,35 @@ import SweetPotatoSoup from "./poze mancare/sweet-potato-soup.jpg";
 import FishSoup from "./poze mancare/fish-soup.jpg";
 import ButterBeanSoup from "./poze mancare/butter-bean-soup.jpg";
 import VerdantSoup from "./poze mancare/verdant-soup.jpg";
-import {VscDiffAdded} from "react-icons/vsc";
 
+import Product from './components/product';
+import Product_container from './components/product_container';
 
 export default function Soup(){
     return(
-    <div><Menu/>
-        <div className="food_menu_container">
-            <div className="food_menu_row">
-            <div className="content_menu">
-            <img className="food_menu_imagine" src = {ChickenNoodlesSoup} alt="Imagine indisponibila." ></img>
-            <h1>CHICKEN NOODLES</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>egg,salt,piper</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-            <div className="content_menu">
-            <img className="food_menu_imagine" src = {PeaAndMintSoup} alt="Imagine indisponibila." ></img>
-            <h1>PEA AND MINT</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>milk,flour,egg,nutella,fruits</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-            <div className="content_menu ">
-            <img className="food_menu_imagine" src = {CreamyCarrotSoup} alt="Imagine indisponibila." ></img>
-            <h1>CREAMY CARROT</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>flour,milk,egg,olive,butter</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-            <div className="content_menu">
-            <img className="food_menu_imagine" src = {TomYum} alt="Imagine indisponibila." ></img>
-            <h1>TOM YUM</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>bread,butter,ham,tomato,salad</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-             </div> {/* </Slide> */}
-            </div >
-           
-            <div className="food_menu_container">
-            <div className="food_menu_row">
-            <div className="content_menu">
-            <img className="food_menu_imagine" src = {ThreeBeanSoup} alt="Imagine indisponibila." ></img>
-            <h1>THREE BEAN</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>milk,cereals</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-            <div className="content_menu">
-            <img className="food_menu_imagine" src = {CaulyflowerSoup} alt="Imagine indisponibila." ></img>
-            <h1>CAULYFLOWER</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>milk,fruits,ice</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-            <div className="content_menu ">
-            <img className="food_menu_imagine" src = {RamenSoup} alt="Imagine indisponibila." ></img>
-            <h1>RAMEN</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>bread,tomato,avocado,basil</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-            <div className="content_menu">
-            <img className="food_menu_imagine" src = {HotAndSourFishSoup} alt="Imagine indisponibila." ></img>
-            <h1>HOT & SOUR FISH</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>almond flour,milk,eggs</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-             </div>
-            </div >
-             
-            <div className="food_menu_container ">
-            <div className="food_menu_row">
-            <div className="content_menu">
-            <img className="food_menu_imagine" src = {SweetPotatoSoup} alt="Imagine indisponibila." ></img>
-            <h1>SWEET POTATO</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>yogurt</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-            <div className="content_menu">
-            <img className="food_menu_imagine" src = {FishSoup} alt="Imagine indisponibila." ></img>
-            <h1>FISH</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>apple,banana,strawberry</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-            <div className="content_menu ">
-            <img className="food_menu_imagine" src = {ButterBeanSoup} alt="Imagine indisponibila." ></img>
-            <h1>BUTTER BEAN</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>milk,vanilla</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-            <div className="content_menu">
-            <img className="food_menu_imagine" src = {VerdantSoup} alt="Imagine indisponibila." ></img>
-            <h1>VERDANT</h1>
-            <h3>Ingredients</h3>
-            {/* <h3>cheese,ham,nuts</h3> */}
-            <h1>5 euro</h1>
-            <VscDiffAdded className="add_to_cart"/>
-            </div>
-             </div>
-            </div >
+    <div>
+       
+       <Product_container>
+    <Product product_name="Chicken Noodles Soup" image={ChickenNoodlesSoup} price="4 euro"></Product>
+            <Product product_name="Pea And Mint Soup " image={PeaAndMintSoup} price="4 euro"></Product>
+            <Product product_name="Creamy Carrot Soup" image={CreamyCarrotSoup}  price="4 euro"></Product>
+            <Product product_name="Tom Yum" image={TomYum} price="4 euro"></Product>
+    </Product_container>
+   
+       
+        <Product_container>
+            <Product product_name="Three Bean Soup" image={ThreeBeanSoup} price="4 euro"></Product>
+            <Product product_name="Caulyflower Soup" image={CaulyflowerSoup} price="4 euro"></Product>
+            <Product product_name="Ramen Soup" image={RamenSoup}  price="4 euro"></Product>
+            <Product product_name="Hot And Sour Fish Soup" image={HotAndSourFishSoup} price="4 euro"></Product>
+        </Product_container>
+        
+        <Product_container data_aos="fade-up">
+            <Product product_name="Sweet Potato Soup" image={SweetPotatoSoup} price="4 euro"></Product>
+            <Product product_name="Fish Soup" image={FishSoup} price="4 euro"></Product>
+            <Product product_name="Butter Bean Soup" image={ButterBeanSoup}  price="4 euro"></Product>
+            <Product product_name="Verdant Soup" image={VerdantSoup} price="4 euro"></Product>
+        </Product_container>
             </div>
             
     
