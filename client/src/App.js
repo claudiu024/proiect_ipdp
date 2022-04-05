@@ -2,6 +2,7 @@ import './App.css';
 import Register from "./register"
 import Home from "./home"
 import Login from './login';
+import MyAccount from './myaccount';
 import PasswordReset from './passwordreset'
 import Breakfast from './breakfast';
 import Soup from './soup';
@@ -28,6 +29,10 @@ function App() {
       <Switch>
       <Route path="/shop">
             <Shop />
+          </Route>
+
+          <Route path="/myaccount">
+            <MyAccount />
           </Route>
 
         <Route path="/breakfast">

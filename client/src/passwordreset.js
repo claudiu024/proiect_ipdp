@@ -7,7 +7,7 @@ import {PasswordResetCode} from './components/Password_reset_code.js'
 
 function PasswordReset()
 {   
-
+    const [component_list,setComponent]=useState(); 
     const [IsVisible,setIsVisible]=useState();
     const transition=useTransition(IsVisible,{
       config:{duration: 500},

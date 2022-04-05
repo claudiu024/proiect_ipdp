@@ -19,7 +19,7 @@ export default function Shop_Product(props) {
       
         <div className=" shop-div " >
         <img className="shop-image inline" src = {props.image} alt="Imagine indisponibila." ></img>
-                <h2 className="inline"> {props.product_name}  price: {props.price}  </h2>
+                <h2 className="inline"> {props.product_name} </h2><h2 className="inline">price: {props.price}  </h2>
            <div className='counter'> 
          <button className='icon_button'  onClick={count_down}> 
          <img className=" inline" src ={minus }/>

@@ -20,7 +20,7 @@ export default function Breakfast(){
         
      
 <ProductContainer>
-    <Product product_name="Scrambled Eggs" image={ScrambledEggs} price="4 euro"></Product>
+    <Product product_name="Scrambled Eggs" product_ingredient="alabalaphvgjujuyjyujuortocala" image={ScrambledEggs} price="4 euro"></Product>
             <Product product_name="Pancakes " image={Pancakes} price="4 euro"></Product>
             <Product product_name="Croissant" image={Croissant}  price="4 euro"></Product>
             <Product product_name="Sandwich" image={Sandwich} price="4 euro"></Product>
