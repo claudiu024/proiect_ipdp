@@ -1,9 +1,12 @@
-import React from 'react';
+import{ React,useState }from 'react';
+import ScrambledEggs from "../images/poze mancare/scrambled-eggs.jpg";
+import Shop_Product from './shop_product';
 import Aos from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
 export default function Product_container(props){
-//   render() {
+  
+    
      useEffect(()=>{
         Aos.init({duration:500});
     },[])
@@ -14,8 +17,8 @@ export default function Product_container(props){
         {props.children}
 
             </div>
-            </div>    )
-//   }
+            </div>  
+              )
+
 }
 
-// export default Product_container

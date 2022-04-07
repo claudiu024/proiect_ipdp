@@ -12,7 +12,7 @@ export function Menu ()
     return(
 <div className='menu'>
 <Link to="/"><AiOutlineHome className="home-logo"/></Link>
-<Link to="/shop"><GiShoppingCart className="home-logo"/></Link>
+<Link to="/cart"><GiShoppingCart className="home-logo"/></Link>
 <Link to="/myaccount"><VscAccount className="home-logo"/></Link>
 <h1 className="title-restaurant">Le Livré</h1>
 <div className='vertical-align'>

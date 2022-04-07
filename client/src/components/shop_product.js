@@ -3,7 +3,7 @@ import React ,{Component, useState}from 'react';
  import minus from "../images/icons8-minus-48.png";
 
 import remove from "../images/icons8-remove-50.png"
-export default function Shop_Product(props) {
+export default function Shop_Product({props, index, handleRemove}) {
     const [count, setCount] = useState(1);
     function count_up(){
      setCount(count + 1)
@@ -15,6 +15,9 @@ export default function Shop_Product(props) {
      setCount(count - 1)
       }
    }
+  //   const handleRemove = (index) => {
+  //   dispatch({ type: "REMOVE", index });
+  // };
     return (
       
         <div className=" shop-div " >
@@ -29,7 +32,11 @@ export default function Shop_Product(props) {
         <img className="inline" src ={plus }/>
         </button>
         </div>  
-        <button className='remove-button icon_button'  onClick={remove}>  <img className="inline" src ={remove }></img></button>
+        <button className='remove-button icon_button' 
+        // onClick={handleRemove(index)}
+        >  
+        <img className="inline" src ={remove }></img></button>
+         
               </div>
     )
   }
