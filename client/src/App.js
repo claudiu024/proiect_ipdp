@@ -18,21 +18,31 @@ import {
   Route,
   
 } from "react-router-dom";
+import { Shop_context } from './context';
+import { useState } from 'react';
+import Cart from './Cart';
 
 
 
 function App() {
+  const[state,setState]=useState(false)
   return (
-  <Router>
+   
+  <Router> 
+    <Shop_context.Provider value={{state,setState}}>
     <Scroll_to_Top/>
     <Menu/>
       <Switch>
-      <Route path="/shop">
+      {/* <Route path="/shop">
             <Shop />
-          </Route>
+          </Route> */}
 
           <Route path="/myaccount">
             <MyAccount />
+          </Route>
+
+          <Route path="/cart">
+            <Cart />
           </Route>
 
         <Route path="/breakfast">
@@ -72,7 +82,8 @@ function App() {
           </Route>
 
         </Switch>
-  </Router>
+        </Shop_context.Provider>
+  </Router> 
   );
         }
 

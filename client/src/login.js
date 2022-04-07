@@ -5,7 +5,7 @@ export default function Login(){
     return(
       <div>
       {/* <Menu></Menu>  */}
-      <Login_container title="Login">
+      <Login_container title="Login"  >
  
        
         <input className="text-input"type="text"  placeholder="E-mail adress"></input>

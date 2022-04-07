@@ -1,30 +1,33 @@
-// import React, { Component } from 'react'
-import ScrambledEggs from "./images/poze mancare/scrambled-eggs.jpg";
-import Espresso from "./images/poze bautura/espresso.jpg";
-import { useState } from "react";
-import Shop_Product from "./components/shop_product";
 
-// export function add_component(){const [component_list,setComponent]=useState(); 
-//     if (component_list.length==0) 
-//     {setComponent(component_list.concat(<Shop_Product  product_name="Scrambled Eggs" image={ScrambledEggs} price="4 euro" key={component_list.length}/>))}}
+import React, { useReducer, useContext, createContext } from "react";
 
-//export function add_component(){const [component_list,setComponent]=useState(); 
-  //  if (component_list.length==0) setComponent(component_list.concat(<Shop_Product  product_name="Scrambled Eggs" image={ScrambledEggs} price="4 euro" key={component_list.length}/>))}
-// import {VscAccount} from "react-icons/vsc";
-export default function Shop()  {
-   
-   
-    return (
-      <div className="container">
-      <div className="shop-container">
-        <h1 style={{}}>Shopping Cart</h1>
-  <Shop_Product  product_name="Scrambled Eggs" image={ScrambledEggs} price="4 euro"></Shop_Product>
+const CartStateContext = createContext();
+const CartDispatchContext = createContext();
 
-  <Shop_Product  product_name="Espresso" image={Espresso} price="4 euro"></Shop_Product>  
- {/* {component_list} */}
-       </div>
-       </div>
-    )
-  
-}
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "ADD":
+      return [...state, action.item];
+    case "REMOVE":
+      const newArr = [...state];
+      newArr.splice(action.index, 1);
+      return newArr;
+    default:
+      throw new Error(`unknown action ${action.type}`);
+  }
+};
 
+export const CartProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, []);
+
+  return (
+    <CartDispatchContext.Provider value={dispatch}>
+      <CartStateContext.Provider value={state}>
+        {children}
+      </CartStateContext.Provider>
+    </CartDispatchContext.Provider>
+  );
+};
+
+export const useCart = () => useContext(CartStateContext);
+export const useDispatchCart = () => useContext(CartDispatchContext);
