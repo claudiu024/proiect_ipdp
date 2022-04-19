@@ -9,8 +9,8 @@ const db=require("./models");
 const {User} = require('./models');
 
 app.get("/select",(req,res)=>{
-  User.findAll().then((users1)=>{
-    res.send(users1)
+  User.findAll().then((users)=>{
+    res.send(users)
   })  
 })
 app.post("/create", (req, res) => {
