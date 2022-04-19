@@ -11,8 +11,7 @@ export default function Product_container(props){
         Aos.init({duration:500});
     },[])
     return (
-        <div data-aos={props.data_aos} 
-        className="food_menu_container">
+        <div data-aos={props.data_aos} className="food_menu_container">
         <div className="food_menu_row">
         {props.children}
 

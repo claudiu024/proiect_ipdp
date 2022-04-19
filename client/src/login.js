@@ -4,7 +4,7 @@ import Login_container from "./components/login_container"
 export default function Login(){
     return(
       <div>
-      {/* <Menu></Menu>  */}
+    
       <Login_container title="Login"  >
  
        

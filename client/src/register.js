@@ -4,7 +4,7 @@ import { Menu} from "./components/menu" ;
 import Axios from "axios";
 import Login_container from './components/login_container';
 import { Link } from 'react-router-dom';
-// import {PasswordReset} from './  /passwordreset.js'
+
 
 function Register(){
     const [first_name, setfirst_name]=useState("");
@@ -15,7 +15,7 @@ function Register(){
     const [Password,setPassword]=useState("");
 
     const submit =()=>{
-// console.log(first_name)
+
 Axios.post('http://localhost:4060/create',{
         first_name:first_name,
         last_name:last_name,
@@ -57,7 +57,7 @@ Axios.post('http://localhost:4060/create',{
              <Link  to= "/login"><button onClick={submit} className="connect-input connect-input-register" type="submit" value="Create account" >Create account</button>
              </Link> 
               {/* </form> */}
-              {/* </div> */}
+             
               </Login_container>
             
           </div>

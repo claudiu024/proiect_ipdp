@@ -6,7 +6,7 @@ import Shop_Product from "./components/shop_product";
 export default function Cart() {
     const items = useCart();
     const dispatch = useDispatchCart();
-    const totalPrice = items.reduce((total, b) => total + b.price, 0);
+    const totalPrice = items.reduce((total, product) => total + product.price*product.count, 0);
   
     const handleRemove = (index) => {
       dispatch({ type: "REMOVE", index });
@@ -25,18 +25,12 @@ export default function Cart() {
       );
     }
     return (
-      <main>
+    
      
         
         <div className="container">
       <div className="shop-container">
-      <p>
-          Total price:{" "}
-          {totalPrice.toLocaleString("en", {
-            style: "currency",
-            currency: "USD"
-          })}
-        </p>
+     
         {items.map((item, index) => (
      
         <Shop_Product
@@ -45,8 +39,16 @@ export default function Cart() {
 
         </Shop_Product>
         ))}
-        </div></div>
-      </main>
+          <h2 style={{marginRight:50,textAlign:"right"}}>
+          Total price:{}
+          {totalPrice.toLocaleString("en", {
+            style: "currency",
+            currency: "EUR"
+          })}
+        </h2>
+        </div>
+       </div>
+  
     );
   }
   

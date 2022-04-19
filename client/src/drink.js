@@ -37,40 +37,40 @@ export default function Drink(){
     <div >
 
       <Product_container >
-            <Product product_name="Fruits Juice" image={FruitsJuice} price="4 euro"></Product>
-            <Product product_name="Still Water " image={StillWater} price="4 euro"></Product>
-            <Product product_name="Mineral Water" image={MineralWater}  price="4 euro"></Product>
-            <Product product_name="Tea" image={Tea} price="4 euro"></Product>
+            <Product product_name="Fruits Juice" image={FruitsJuice} price={4}></Product>
+            <Product product_name="Still Water " image={StillWater} price={4}></Product>
+            <Product product_name="Mineral Water" image={MineralWater}  price={4}></Product>
+            <Product product_name="Tea" image={Tea} price={4}></Product>
         </Product_container>
        
         <Product_container >
-            <Product product_name="Espresso" image={Espresso} price="4 euro"></Product>
-            <Product product_name="Cappuccino" image={Cappuccino} price="4 euro"></Product>
-            <Product product_name="Iced Coffee" image={IcedCoffee}  price="4 euro"></Product>
-            <Product product_name="Irish Coffee" image={IrishCoffee} price="4 euro"></Product>
+            <Product product_name="Espresso" image={Espresso} price={4}></Product>
+            <Product product_name="Cappuccino" image={Cappuccino} price={4}></Product>
+            <Product product_name="Iced Coffee" image={IcedCoffee}  price={4}></Product>
+            <Product product_name="Irish Coffee" image={IrishCoffee} price={4}></Product>
         </Product_container>
         
        
 
         <Product_container data_aos="fade-up">
-            <Product product_name="Negroni" image={Negroni} price="4 euro"></Product>
-            <Product product_name="Gin Martini" image={GinMartini} price="4 euro"></Product>
-            <Product product_name="Margarita" image={Margarita}  price="4 euro"></Product>
-            <Product product_name="Pink Margarita" image={PinkMargarita} price="4 euro"></Product>
+            <Product product_name="Negroni" image={Negroni} price={4}></Product>
+            <Product product_name="Gin Martini" image={GinMartini} price={4}></Product>
+            <Product product_name="Margarita" image={Margarita}  price={4}></Product>
+            <Product product_name="Pink Margarita" image={PinkMargarita} price={4}></Product>
         </Product_container>
                 <Product_container data_aos="fade-up">
 
-            <Product product_name="Lagerita" image={Lagerita} price="4 euro"></Product>
-            <Product product_name="Bramble Gin" image={BrambleGin} price="4 euro"></Product>
-            <Product product_name="Vasper Martini" image={VasperMartini}  price="4 euro"></Product>
-            <Product product_name="Mai Tai" image={MaiTai} price="4 euro"></Product>
+            <Product product_name="Lagerita" image={Lagerita} price={4}></Product>
+            <Product product_name="Bramble Gin" image={BrambleGin} price={4}></Product>
+            <Product product_name="Vasper Martini" image={VasperMartini}  price={4}></Product>
+            <Product product_name="Mai Tai" image={MaiTai} price={4}></Product>
         </Product_container>
 
          <Product_container data_aos="fade-up">
-            <Product product_name="Zombie Cocktail" image={ZombieCocktail} price="4 euro"></Product>
-            <Product product_name="Pina Colada " image={PinaColada} price="4 euro"></Product>
-            <Product product_name="Rum Negroni" image={RumNegroni}  price="4 euro"></Product>
-            <Product product_name="Paloma Cocktail" image={PalomaCocktail} price="4 euro"></Product>
+            <Product product_name="Zombie Cocktail" image={ZombieCocktail} price={4}></Product>
+            <Product product_name="Pina Colada " image={PinaColada} price={4}></Product>
+            <Product product_name="Rum Negroni" image={RumNegroni}  price={4}></Product>
+            <Product product_name="Paloma Cocktail" image={PalomaCocktail} price={4}></Product>
         </Product_container>
       
             </div>

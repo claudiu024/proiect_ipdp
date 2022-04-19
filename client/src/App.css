@@ -294,7 +294,7 @@ color:white;
   margin:auto;
   width: 70rem;
   height: 100%;
- 
+  overflow: scroll;
   position: absolute;
   display:inline-block;
   vertical-align: middle;

@@ -11,32 +11,29 @@ import Drink from './drink';
 import Desert from './desert';
 import Scroll_to_Top from './components/Scroll_to_Top';
 import { Menu } from './components/menu';
-import Shop from './shop';
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   
 } from "react-router-dom";
-import { Shop_context } from './context';
+
 import { useState } from 'react';
 import Cart from './Cart';
 
 
 
 function App() {
-  const[state,setState]=useState(false)
+
   return (
    
   <Router> 
-    <Shop_context.Provider value={{state,setState}}>
+
     <Scroll_to_Top/>
     <Menu/>
       <Switch>
-      {/* <Route path="/shop">
-            <Shop />
-          </Route> */}
-
+    
           <Route path="/myaccount">
             <MyAccount />
           </Route>
@@ -82,7 +79,7 @@ function App() {
           </Route>
 
         </Switch>
-        </Shop_context.Provider>
+   
   </Router> 
   );
         }

@@ -21,24 +21,24 @@ export default function Desert(){
     <div>
              
         <ProductContainer>
-            <Product product_name="Tiramisu" image={Tiramisu} price="4 euro"></Product>
-            <Product product_name="Brownie " image={Brownie} price="4 euro"></Product>
-            <Product product_name="Lavacake" image={Lavacake}  price="4 euro"></Product>
-            <Product product_name="Cheesecake" image={Cheesecake} price="4 euro"></Product>
+            <Product product_name="Tiramisu" image={Tiramisu} price={4}></Product>
+            <Product product_name="Brownie " image={Brownie} price={4}></Product>
+            <Product product_name="Lavacake" image={Lavacake}  price={4}></Product>
+            <Product product_name="Cheesecake" image={Cheesecake} price={4}></Product>
         </ProductContainer>
        
         <ProductContainer>
-            <Product product_name="Profiteroles" image={Profiteroles} price="4 euro"></Product>
-            <Product product_name="Apple Pie" image={ApplePie} price="4 euro"></Product>
-            <Product product_name="Lemon Slice" image={LemonSlice}  price="4 euro"></Product>
-            <Product product_name="Pana Cotta" image={PanaCotta} price="4 euro"></Product>
+            <Product product_name="Profiteroles" image={Profiteroles} price={4}></Product>
+            <Product product_name="Apple Pie" image={ApplePie} price={4}></Product>
+            <Product product_name="Lemon Slice" image={LemonSlice}  price={4}></Product>
+            <Product product_name="Pana Cotta" image={PanaCotta} price={4}></Product>
         </ProductContainer>
         
         <ProductContainer data_aos="fade-up">
-            <Product product_name="Ecler" image={Ecler} price="4 euro"></Product>
-            <Product product_name="Banoffee Pie" image={BanoffeePie} price="4 euro"></Product>
-            <Product product_name="Mini Tart" image={MiniTart}  price="4 euro"></Product>
-            <Product product_name="Muffins" image={Muffins} price="4 euro"></Product>
+            <Product product_name="Ecler" image={Ecler} price={4}></Product>
+            <Product product_name="Banoffee Pie" image={BanoffeePie} price={4}></Product>
+            <Product product_name="Mini Tart" image={MiniTart}  price={4}></Product>
+            <Product product_name="Muffins" image={Muffins} price={4}></Product>
         </ProductContainer>
 
             </div>

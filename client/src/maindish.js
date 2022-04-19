@@ -19,25 +19,25 @@ export default function MainDish(){
     return(
     <div>
       <ProductContainer>
-    <Product  product_name="Carbonara" image={Carbonara} price="4 euro"></Product>
-            <Product product_name="Salmon Pasta " image={SalmonPasta} price="4 euro"></Product>
-            <Product product_name="Beef Wellington" image={BeefWellington}  price="4 euro"></Product>
-            <Product product_name="Beef Steak" image={BeefSteak} price="4 euro"></Product>
+            <Product  product_name="Carbonara" image={Carbonara} price={4}></Product>
+            <Product product_name="Salmon Pasta " image={SalmonPasta} price={4}></Product>
+            <Product product_name="Beef Wellington" image={BeefWellington}  price={4}></Product>
+            <Product product_name="Beef Steak" image={BeefSteak} price={4}></Product>
     </ProductContainer>
    
        
         <ProductContainer >
-            <Product  product_name="Greek Salad" image={GreekSalad} price="4 euro"></Product>
-            <Product product_name="Vegetables" image={Vegetables} price="4 euro"></Product>
-            <Product product_name="Lasagna" image={Lasagna}  price="4 euro"></Product>
-            <Product product_name="Porchetta" image={Porchetta} price="4 euro"></Product>
+            <Product  product_name="Greek Salad" image={GreekSalad} price={4}></Product>
+            <Product product_name="Vegetables" image={Vegetables} price={4}></Product>
+            <Product product_name="Lasagna" image={Lasagna}  price={4}></Product>
+            <Product product_name="Porchetta" image={Porchetta} price={4}></Product>
         </ProductContainer>
         
         <ProductContainer data_aos="fade-up">
-            <Product product_name="Risotto" image={Risotto} price="4 euro"></Product>
-            <Product product_name="Duck" image={Duck} price="4 euro"></Product>
-            <Product product_name="Chicken" image={Chicken}  price="4 euro"></Product>
-            <Product product_name="Seared Salmon" image={SearedSalmon} price="4 euro"></Product>
+            <Product product_name="Risotto" image={Risotto} price={4}></Product>
+            <Product product_name="Duck" image={Duck} price={4}></Product>
+            <Product product_name="Chicken" image={Chicken}  price={4}></Product>
+            <Product product_name="Seared Salmon" image={SearedSalmon} price={4}></Product>
         </ProductContainer>
             </div>
             

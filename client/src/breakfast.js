@@ -20,25 +20,25 @@ export default function Breakfast(){
         
      
 <ProductContainer>
-    <Product product_name="Scrambled Eggs" product_ingredient="alabalaphvgjujuyjyujuortocala" image={ScrambledEggs} price="4 euro"></Product>
-            <Product product_name="Pancakes " image={Pancakes} price="4 euro"></Product>
-            <Product product_name="Croissant" image={Croissant}  price="4 euro"></Product>
-            <Product product_name="Sandwich" image={Sandwich} price="4 euro"></Product>
+    <Product product_name="Scrambled Eggs" product_ingredient="alabalaphvgjujuyjyujuortocala" image={ScrambledEggs} price={4}></Product>
+            <Product product_name="Pancakes " image={Pancakes} price={4}></Product>
+            <Product product_name="Croissant" image={Croissant}  price={4}></Product>
+            <Product product_name="Sandwich" image={Sandwich} price={4}></Product>
                 </ProductContainer>
    
        
         <ProductContainer>
-            <Product product_name="Cereals" image={Cereals} price="4 euro"></Product>
-            <Product product_name="Smoothie Bowl" image={SmoothieBowl} price="4 euro"></Product>
-            <Product product_name="French Plateau" image={FrenchPlateau}  price="4 euro"></Product>
-            <Product product_name="Bruschetta" image={Bruschetta} price="4 euro"></Product>
+            <Product product_name="Cereals" image={Cereals} price={4}></Product>
+            <Product product_name="Smoothie Bowl" image={SmoothieBowl} price={4}></Product>
+            <Product product_name="French Plateau" image={FrenchPlateau}  price={4}></Product>
+            <Product product_name="Bruschetta" image={Bruschetta} price={4}></Product>
         </ProductContainer>
         
         <ProductContainer data_aos="fade-up">
-            <Product product_name="Yogurt" image={Yogurt} price="4 euro"></Product>
-            <Product product_name="Fruit Salad" image={FruitSalad} price="4 euro"></Product>
-            <Product product_name="Oats" image={Oats}  price="4 euro"></Product>
-            <Product product_name="Chia Pudding" image={ChiaPudding} price="4 euro"></Product>
+            <Product product_name="Yogurt" image={Yogurt} price={4}></Product>
+            <Product product_name="Fruit Salad" image={FruitSalad} price={4}></Product>
+            <Product product_name="Oats" image={Oats}  price={4}></Product>
+            <Product product_name="Chia Pudding" image={ChiaPudding} price={4}></Product>
         </ProductContainer>
         
        </div>     

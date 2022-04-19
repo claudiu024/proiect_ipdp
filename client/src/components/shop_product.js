@@ -4,6 +4,7 @@ import React ,{Component, useState}from 'react';
 
 import remove from "../images/icons8-remove-50.png"
 export default function Shop_Product({props, index, handleRemove}) {
+ 
     const [count, setCount] = useState(1);
     function count_up(){
      setCount(count + 1)
@@ -15,14 +16,12 @@ export default function Shop_Product({props, index, handleRemove}) {
      setCount(count - 1)
       }
    }
-  //   const handleRemove = (index) => {
-  //   dispatch({ type: "REMOVE", index });
-  // };
+
     return (
       
         <div className=" shop-div " >
         <img className="shop-image inline" src = {props.image} alt="Imagine indisponibila." ></img>
-                <h2 className="inline"> {props.product_name} </h2><h2 className="inline">price: {props.price}  </h2>
+                <h2 className="inline"> {props.product_name} </h2><h2 className="inline">price: {props.price} euro </h2>
            <div className='counter'> 
          <button className='icon_button'  onClick={count_down}> 
          <img className=" inline" src ={minus }/>
@@ -33,7 +32,7 @@ export default function Shop_Product({props, index, handleRemove}) {
         </button>
         </div>  
         <button className='remove-button icon_button' 
-        // onClick={handleRemove(index)}
+       onClick={() => handleRemove(index)}
         >  
         <img className="inline" src ={remove }></img></button>
          

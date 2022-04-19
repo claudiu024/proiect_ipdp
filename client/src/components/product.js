@@ -1,11 +1,16 @@
 import React from 'react';
 import {VscDiffAdded} from "react-icons/vsc";
 import Tooltip from '@mui/material/Tooltip/Tooltip';
- import { useDispatchCart } from "./Cart";
+ import { useDispatchCart,useCart} from "./Cart";
 export default function Product(props) {
 
   const dispatch = useDispatchCart();
+  const state = useCart();
   const addToCart = (item) => {
+    // console.log(state[0])
+      if (state.includes(item)) 
+        item.count+=1
+      else
         dispatch({ type: "ADD", item });
       };
 
@@ -19,7 +24,7 @@ export default function Product(props) {
         </div>
         </div>
         <h1 className='product'>{props.product_name}</h1>
-        <h2 className="price">{props.price}</h2>
+        <h2 className="price">{props.price} euro</h2>
       
          <Tooltip title="Add to cart" placement="bottom" arrow>
         <button onClick={()=>addToCart(props)} className='icon_button'>
