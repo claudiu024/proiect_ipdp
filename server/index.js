@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 const db=require("./models");
 const {User} = require('./models');
-
+const port=3001;
 app.get("/select",(req,res)=>{
   User.findAll().then((users)=>{
     res.send(users)
@@ -30,8 +30,20 @@ app.post("/create", (req, res) => {
 
 })
 
+app.post("/verify-login", (req, res) => {
+  
+  User.findAll({where:{Email:req.body.Email,Password:req.body.Password}}).then((users)=>{
+      //  Email:req.body.Email,
+      //  Password:req.body.Password
+      if (users.length!==0){
+      res.send(users)
+      console.log("user GASIT")
+      }else res.status(404).send('Sorry, cant find that');
+  })
+})
 
-port=4060
+
+
 db.sequelize.sync().then((req)=>{
 app.listen(port, () => {
   console.log("Server is running on port",port);
