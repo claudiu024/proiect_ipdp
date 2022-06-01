@@ -24,7 +24,7 @@ function Register(){
          e.preventDefault();  //previne refresh-ul paginii
         
 if(Password==ConfirmPassword ){
-  
+ 
 Axios.post('http://localhost:3001/create',{
         first_name:first_name,
         last_name:last_name,
@@ -40,7 +40,7 @@ Axios.post('http://localhost:3001/create',{
     
     else {
       
-        add_component();
+			add_component();
         console.log("password doesn't match")
     }
   
@@ -85,7 +85,7 @@ Axios.post('http://localhost:3001/create',{
               </div>
               {component_list} 
              <input  className="connect-input connect-input-register" type="submit" value="Create account" >
-                 {/* Create account */}
+                
                  </input>
              </form>
           

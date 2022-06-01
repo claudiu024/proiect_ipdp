@@ -13,18 +13,58 @@ import Oats from "./images/poze mancare/oats.jpg";
 import ChiaPudding from "./images/poze mancare/chia-pudding.jpg";
 import Product from './components/product';
 import ProductContainer from './components/product_container';
-
+import {useStateIfMounted} from "use-state-if-mounted"
+import { useEffect, useState,useContext } from "react";
+import { LoginContext } from "./Helpers/LoginContext";
+import axios from "axios"
+// var count1=1;
+// var count2=2;
 export default function Breakfast(){
+    // const [count, setCount] = useStateIfMounted(1);
+    const {breakfast,setBreakfast,AddProductVisibility}=useContext(LoginContext)
+    var breakfast_url="https://628b930f667aea3a3e324150.mockapi.io/breakfast"
+//   const[count,setCount]=useState(1);
+// var a=axios.get(spoturl).then(console.log(a))
+// const [breakfast,setBreakfast]=useState();
+// useEffect(()=>{axios.get(breakfast_url)
+//     .then(res=>{setBreakfast(res.data) 
+
+useEffect(()=>{axios.get(breakfast_url)
+    .then(res=>{setBreakfast(res.data) 
+console.log("render")
+
+})},[AddProductVisibility])
+// })},[AddProductVisibility])
+
+if(breakfast){
     return(
-    <div>
-        
+    <div>{AddProductVisibility? "true" :" false"}
+        <ProductContainer>
+        {breakfast.map((item, index) => (
      
-<ProductContainer>
-    <Product product_name="Scrambled Eggs" product_ingredient="alabalaphvgjujuyjyujuortocala" image={ScrambledEggs} price={4}></Product>
-            <Product product_name="Pancakes " image={Pancakes} price={4}></Product>
+     <Product
+     product_name={item.product_name}
+     product_ingredients={item.product_ingredients}
+     image={item.image}
+     price={item.price}
+     count={item.count}
+     id={item.id}
+     key={index}
+     
+     // count={count}
+     // setCount={setCount}
+      >
+
+     </Product>
+     ))}
+      </ProductContainer>
+     
+		{/* <ProductContainer>
+			<Product product_name={breakfast[0].product_name }product_ingredients="alabalaportocala" image={ScrambledEggs} price={4} count={breakfast[0].count} setCount={setCount}></Product>
+            <Product product_name={breakfast[1].product_name } image={Pancakes} price={5} count={breakfast[1].count} setCount={setCount}></Product>
             <Product product_name="Croissant" image={Croissant}  price={4}></Product>
             <Product product_name="Sandwich" image={Sandwich} price={4}></Product>
-                </ProductContainer>
+        </ProductContainer>
    
        
         <ProductContainer>
@@ -39,9 +79,10 @@ export default function Breakfast(){
             <Product product_name="Fruit Salad" image={FruitSalad} price={4}></Product>
             <Product product_name="Oats" image={Oats}  price={4}></Product>
             <Product product_name="Chia Pudding" image={ChiaPudding} price={4}></Product>
-        </ProductContainer>
+        </ProductContainer> */}
         
        </div>     
              
-    )
+    )}else
+    return(<p>load</p>)
 }

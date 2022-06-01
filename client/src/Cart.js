@@ -1,14 +1,25 @@
 import React from "react";
 import { useCart, useDispatchCart } from "./components/Cart";
+import { useState } from "react";
 import Shop_Product from "./components/shop_product";
+import sum from "./Helpers/sum"
 
-
-export default function Cart() {
-    const items = useCart();
-    const dispatch = useDispatchCart();
-    const totalPrice = items.reduce((total, product) => total + product.price*product.count, 0);
+export default function Cart(props) {
   
+    const items = useCart();
+    // const [count, setCount] = useState(2);
+    const dispatch = useDispatchCart();
+    
+    let  totalPrice = items.reduce((total, product) =>sum(total , product.price)   , 0);
+   // product.count
+  
+  const product={
+    name:"product",
+    price:8
+  }
+ 
     const handleRemove = (index) => {
+
       dispatch({ type: "REMOVE", index });
     };
   
@@ -25,16 +36,15 @@ export default function Cart() {
       );
     }
     return (
-    
-     
-        
-        <div className="container">
-      <div className="shop-container">
+ 
+      <div className="container">
+        <div className="shop-container">
      
         {items.map((item, index) => (
      
         <Shop_Product
         handleRemove={handleRemove}
+        
          key={index} props={item} index={index} >
 
         </Shop_Product>

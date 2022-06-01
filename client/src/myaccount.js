@@ -5,10 +5,11 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
+import { LoginContext } from "./Helpers/LoginContext";
+import { useContext } from "react";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
+  
   return (
     <div
       role="tabpanel"
@@ -41,7 +42,7 @@ function a11yProps(index) {
 
 export default function Myaccount() {
   const [value, setValue] = React.useState(0);
-
+  const {Email,setEmail,user}=useContext(LoginContext)
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -54,24 +55,24 @@ export default function Myaccount() {
     >
       <Tabs
         centered
-        // orientation="horizontal"
-        // variant="scrollable"
+     
         value={value}
         onChange={handleChange}
         
         sx={{ borderBottom: 1, borderColor: 'divider',textAlign:"left",color:"blue" }}
       >
 
-        <Tab  label={<h2 className="login">My Profile </h2>} {...a11yProps(0)}  />
+          <Tab  label={<h2 className="login">My Profile </h2>} {...a11yProps(0)}  />
            <Tab label={<h2 className="login">Order History </h2> }{...a11yProps(1)}/>
 
       </Tabs>
       <TabPanel sx={{ textAlign:"left"}} value={value} index={0}>
-         <h2>Name: </h2>
-         <h2>Last Name:</h2>
-         <h2>Phone Number:</h2>
-         <h2>E-mail:</h2>
-         <h2>Adress:</h2>
+         <h2>Name: {user.first_name}</h2>
+         <h2>Last Name:{user.last_name}</h2>
+         <h2>Phone Number:{user.Phone_number}</h2>
+         <h2>E-mail:{user.Email}</h2>
+         <h2>Adress:{user.Adress}</h2>
+         <h2>Admin:{(user.Admin)? "true":"false" }</h2>
       </TabPanel>
       {/* <TabPanel value={value} index={1}> */}
      
