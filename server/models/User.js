@@ -38,8 +38,13 @@ const User=sequelize.define("User",{
         allowNull:false,
         validate:{
             notEmpty:true
+    }},
+    Admin:{
+        type:DataTypes.BOOLEAN,
+        allowNull:false,
+        validate:{
+            notEmpty:true
     }}
-
 }   )
 return User;
 }
